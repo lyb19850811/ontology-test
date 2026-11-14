@@ -1,0 +1,72 @@
+@prefix ns1: <http://example.org/medical.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://anonymous> a owl:Ontology .
+
+<http://example.org/medical.owl> a owl:Ontology .
+
+ns1:Antibiotic a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom ns1:BacterialDisease ;
+            owl:onProperty ns1:treats ],
+        ns1:Drug ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( ns1:Drug [ a owl:Restriction ;
+                        owl:onProperty ns1:treats ;
+                        owl:someValuesFrom ns1:BacterialDisease ] ) ] .
+
+ns1:flu a ns1:ViralDisease,
+        owl:NamedIndividual ;
+    rdfs:label "流感"^^xsd:string .
+
+ns1:hasSymptom a owl:ObjectProperty ;
+    rdfs:domain ns1:Disease ;
+    rdfs:range ns1:Symptom .
+
+ns1:amoxicillin a ns1:Drug,
+        owl:NamedIndividual ;
+    rdfs:label "阿莫西林"^^xsd:string ;
+    ns1:treats ns1:pneumonia .
+
+ns1:fever a ns1:Symptom,
+        owl:NamedIndividual ;
+    rdfs:label "发热"^^xsd:string .
+
+ns1:pneumonia a ns1:BacterialDisease,
+        owl:NamedIndividual ;
+    rdfs:label "肺炎"^^xsd:string ;
+    ns1:hasSymptom ns1:fever ;
+    ns1:treatedBy ns1:amoxicillin .
+
+ns1:treatedBy a owl:ObjectProperty ;
+    rdfs:domain ns1:Disease ;
+    rdfs:range ns1:Drug ;
+    owl:inverseOf ns1:treats .
+
+ns1:InfectiousDisease a owl:Class ;
+    rdfs:subClassOf ns1:Disease .
+
+ns1:Symptom a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+ns1:ViralDisease a owl:Class ;
+    rdfs:subClassOf ns1:InfectiousDisease .
+
+ns1:BacterialDisease a owl:Class ;
+    rdfs:subClassOf ns1:InfectiousDisease ;
+    owl:disjointWith ns1:ViralDisease .
+
+ns1:treats a owl:ObjectProperty ;
+    rdfs:domain ns1:Drug ;
+    rdfs:range ns1:Disease ;
+    owl:inverseOf ns1:treatedBy .
+
+ns1:Disease a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+ns1:Drug a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+

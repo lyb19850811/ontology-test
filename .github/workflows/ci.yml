@@ -1,0 +1,29 @@
+name: Ontology Build & Reasoning CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-reason:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Java (HermiT 运行时)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build ontology & run HermiT reasoning verification
+        run: python build_medical_ontology.py

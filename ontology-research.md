@@ -296,3 +296,13 @@ AI 与本体的关系是**双向**的：本体给 AI 提供"结构化知识与�
 15. *OG-RAG: Ontology-grounded retrieval-augmented generation for large language models*. EMNLP 2025. https://aclanthology.org/2025.emnlp-main.1674
 16. *Ontology-Guided Reverse Thinking Makes LLMs Stronger on KGQA*. ACL 2025. https://aclanthology.org/2025.acl-long.741
 17. *Ontology Learning and Knowledge Graph Construction: A Comparison of Approaches and Their Impact on RAG Performance*. arXiv:2511.05991.
+18. Noy, N. & McGuinness, D. *Ontology Development 101: A Guide to Creating Your First Ontology*. Stanford. https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html
+19. OBO Foundry, *Principles: Overview*. https://obofoundry.org/principles/fp-000-summary.html
+20. OBO Foundry, *Ontology Development Guidelines*. https://obofoundry.org/docs/DevelopmentGuidelines.html
+21. *Ontology Development Kit (ODK) Guide*. https://ontology-development-kit.readthedocs.io/en/latest
+22. Monarch Initiative, *Mondo Editors Guide: GitHub PR Workflow*. https://mondo.readthedocs.io/en/latest/editors-guide/d-github-pr-workflow
+23. Monarch Initiative, *Mondo Developer Guide: Release Workflow*. https://mondo.readthedocs.io/en/latest/developer-guide/release
+24. Monarch Initiative, *Mondo Editors Guide: Import Terms for Logical Axioms*. https://mondo.readthedocs.io/en/latest/editors-guide/import-terms-for-logical-axioms/
+25. Berkeley BOP (BBOP), *Best Practice / House Style Guide*. https://berkeleybop.org/best_practice
+26. *Ontology Design Patterns (ODP) Repository*. https://github.com/odpa/patterns-repository
+27. Keet, M. *An Introduction to Ontology Engineering*, §8.6 Ontology Design Patterns. https://eng.libretexts.org/Bookshelves/Computer_Science/Programming_and_Computation_Fundamentals/An_Introduction_to_Ontology_Engineering_(Keet)/08%3A_Bottom-up_Ontology_Development/8.06%3A__Ontology_Design_Patterns
