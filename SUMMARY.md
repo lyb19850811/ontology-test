@@ -172,9 +172,10 @@ Antibiotic ⊑ ∀treats.BacterialDisease          # ∀：一致性校验
 ## 7. 文件清单
 
 ```
-ontology-research.md        # 本体概念/工具/AI 结合 深度研究
-medical-knowledge.md        # 领域知识文档（本体的自然语言依据）
-build_medical_ontology.py   # 构建 + 推理验证脚本
-medical.owl                 # 生成的 OWL 本体
-.venv/                      # Python 虚拟环境（owlready2）
+ontology-research.md              # 本体概念/工具/AI 结合 深度研究
+ontology-vs-knowledge-graph.md    # 本体与知识图谱的关系 深度研究
+medical-knowledge.md              # 领域知识文档（本体的自然语言依据）
+build_medical_ontology.py         # 构建 + 推理验证脚本
+medical.owl                       # 生成的 OWL 本体
+.venv/                            # Python 虚拟环境（owlready2）
 ```
